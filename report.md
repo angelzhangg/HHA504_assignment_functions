@@ -25,27 +25,23 @@ The objective of this assignment is to introduce you to serverless computing and
 - **GitHub Actions:**
   - Create a new GitHub repository (or use an existing one).
   - Set up a GitHub Action workflow that runs a script on a schedule (e.g., daily at midnight). You can use a simple script that logs "Scheduled task executed" to the console.
-    
+![cron job](https://github.com/user-attachments/assets/06e473a7-1aa1-49a3-9dec-09b7fa1f6d44)
+![cron job1](https://github.com/user-attachments/assets/74c73619-c990-4242-bfd2-885455505ca6)
+
 
 ### 3. Explore Functions as a Service (FaaS)
 - Reflect on the use cases for serverless functions in cloud environments. Consider the benefits and limitations of using Functions as a Service (FaaS) in both Azure and GCP.
 
 ### *Azure*
 #### Benefits
-* They are cost-effective as they have option of consumption plan which has defaulty pricing based on actual usuage as well as pay-per-execution meaning you only pay for the resources during the execution
-* They are able to autoscale based on demand
-* Contain quick develoment which allow users to quickly deploy functions and contain many programming language support such as python, java, and C#
-* Contain Development tools such as visual studio, azure functions core tools and azure portal integration
-* Have multiple plans such as consumption, premium, app service to fit each indivudal's needs
+* Automatic scaling based on demand in both Azure and GCP, FaaS eliminates the need for server management and other infrastructure.
+* Pay per pricing or only for the execution time compared to the traditional VM-based environments.
 #### Limitations 
-* Has an execution time limit of maximum 10 mins for consumption plan
 * Have limited memory and execution time 
 ### *GCP*
 #### Benefits 
-* They are cost-effective as they have option of pay per pricing which allow you to only pay for the time your functions are executed and no infrastructure management which eliminates costs associated with managing servers or infrastructure
-* Contains seamless scaling allowing automatic scaling based on demand
-* Contain rapid development allowing developer to quickly deploy functions without the overhead of server management and have several programming languages such as Node.js, Python, Go, Java, and .NET
-* Is integrated with GCP Services such as Pub/Sub, Cloud Storage, Firestore and supports HTTP triggers, background events from GCP services, and third-party webhooks
+** Automatic scaling based on demand in both Azure and GCP, FaaS eliminates the need for server management and other infrastructure.
+* Pay per pricing or only for the execution time compared to the traditional VM-based environments.
+* I prefer the GCP environment, more straightforword and easier to navigate.
 #### Limitations
-* Has an execution time limit of maximum 9 mins
-* Have limited memory and CPU as they are limited up to 2 GB of memory
+* Have limited memory and CPU, execution time
