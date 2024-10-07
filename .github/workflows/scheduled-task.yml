@@ -1,23 +1,29 @@
-name: Scheduled Task
+name: Scheduled Task Executed 
 
 on:
   schedule:
-    - cron: '0 5 * * *' 
+    - cron: "0 5 * * *" # run once a day at midnight 
   workflow_dispatch: # manual triggers
 
 jobs:
-  run-scheduled-task:
+  run-data-pipline:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out code
+      - name: Checkout repo content
         uses: actions/checkout@v4
+        
+      - name: Setup python
+        uses: actions/checkout@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip'
 
-      - name: Run scheduled task
-        run: |
-          echo "Scheduled task executed at $(date)"
+      - name: Install dependencies 
+        run: pip install -r requirements.txt
 
-     
-
+      - name: Run Scheduled Task Executed 
+        env: 
+          RESEND_API_KEY: ${{secrets.RESEND_API_KEY}}
+        run: python README.md
 
      
