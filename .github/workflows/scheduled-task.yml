@@ -1,10 +1,9 @@
 name: Scheduled Task Executed
 
-name: pubmed_update
 
 on:
-  # schedule:
-  #   - cron: "0 5 * * *" # run once a day at midnight
+  schedule:
+   - cron: "0 5 * * *" # run once a day at midnight
   workflow_dispatch:  # manual triggers
 
 jobs:
@@ -27,5 +26,8 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: python other/module5/pubmed_github_action.py # run data pipeline
+
+     
+
 
      
